@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JA CINEMA KIOSK</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/cinemaKiosk.css" type="text/css">
+</head>
+
+<body>
+  <!-- JA CINEMA div -->
+  <div class = "ja">
+    <a href="../index.html"><img src="img/topBar.png" class="name"></img></a>
+  </div>
+  <!-- 날짜 선택 div -->
+  <div class = "datechoice">
+    <div class="date">
+    <!-- 왼쪽 화살표 (날짜-1) span -->
+      <span class="arrow_left" onclick="todayM()"></span>
+      <!-- 날짜 -->
+        <div id="today" style="display:inline"></div>
+    <!-- 왼쪽 화살표 (날짜-1) span -->
+      <span class="arrow_right" onclick="todayP()"></span>
+  </div>
+  </div>
+  <!-- 영화별 시간순 div -->
+  <div class = "choice">
+    <center>
+      <span><input type="button" class="moviealign" value="영화별"></span>
+      <span><input type="button" class="timealign" value="시간순"></span>
+    </center>
+  </div>
+  <div class = "moviecontent">
+  <!-- 영화1 div -->
+  <div class = "content1" >
+    <!-- 영화 이미지 -->
+    <img src="media/유열의 음악앨범.png" class="image1" align="left">
+    <!-- 관람가 및 영화제목 span -->
+    <span class="title1-age">
+      <img src="img/12.png" class="age12" align="">
+    </span>
+    <span class="title1" id="movie_name1">유열의 음악앨범</span><br>
+    <!-- 시간 선택 span -->
+    <span class="timechoice1">
+      <button class="trigger" onclick="age=12;movie_name_id='movie_name1';time_id='time'; submit2()" id="time">08:00</button></span>
+      <button class="trigger1" onclick="age=12;movie_name_id='movie_name1';time_id='time1'; submit2()" id="time1">10:20</button></span>
+      <button class="trigger2" onclick="age=12;movie_name_id='movie_name1';time_id='time2'; submit2()" id="time2">14:10</button></span>
+      <button class="trigger3" onclick="age=12;movie_name_id='movie_name1';time_id='time3'; submit2()" id="time3">16:35</button></span>
+      <button class="trigger4" onclick="age=12;movie_name_id='movie_name1';time_id='time4'; submit2()" id="time4">23:50</button></span>
+      <br>
+      <button class="trigger5" onclick="age=12;movie_name_id='movie_name1';time_id='time5'; submit2()" id="time5">09:20</button></span>
+      <button class="trigger6" onclick="age=12;movie_name_id='movie_name1';time_id='time6'; submit2()" id="time6">12:40</button></span>
+      <button class="trigger7" onclick="age=12;movie_name_id='movie_name1';time_id='time7'; submit2()" id="time7">15:35</button></span>
+      <button class="trigger8" onclick="age=12;movie_name_id='movie_name1';time_id='time8'; submit2()" id="time8">18:00</button></span>
+      <button class="trigger9" onclick="age=12;movie_name_id='movie_name1';time_id='time9'; submit2()" id="time9">20:30</button></span>
+     </span>
+  </div>
+
+  <!-- 영화2 div -->
+  <!-- 영화2 div -->
+  <div class = "content2">
+    <img src="media/엑시트(액션모험).png" class="image2" align="left">
+    <span class="title2-age">
+      <img src="img/12.png" class="age12" align="">
+    </span>
+    <span class="title2" id="movie_name2">엑시트(액션모험)</span> <br>
+    <span class="timechoice2">
+      <button class="trigger10" onclick="age=12;movie_name_id='movie_name2';time_id='time10'; submit2()" id="time10">10:40</button></span>
+      <button class="trigger11" onclick="age=12;movie_name_id='movie_name2';time_id='time11'; submit2()" id="time11">13:05</button></span>
+      <button class="trigger12" onclick="age=12;movie_name_id='movie_name2';time_id='time12'; submit2()" id="time12">17:55</button></span>
+      <button class="trigger13" onclick="age=12;movie_name_id='movie_name2';time_id='time13'; submit2()" id="time13">20:20</button></span>
+      <button class="trigger14" onclick="age=12;movie_name_id='movie_name2';time_id='time14'; submit2()" id="time14">22:45</button></span>
+      <br>
+      <button class="trigger15" onclick="age=12;movie_name_id='movie_name2';time_id='time15'; submit2()" id="time15">10:10</button></span>
+      <button class="trigger16" onclick="age=12;movie_name_id='movie_name2';time_id='time16'; submit2()" id="time16">15:00</button></span>
+      <button class="trigger17" onclick="age=12;movie_name_id='movie_name2';time_id='time17'; submit2()" id="time17">19:50</button></span>
+      <button class="trigger18" onclick="age=12;movie_name_id='movie_name2';time_id='time18'; submit2()" id="time18">22:15</button></span>
+      <button class="trigger19" onclick="age=12;movie_name_id='movie_name2';time_id='time19'; submit2()" id="time19">24:40</button></span>
+   </span>
+  </div>
+
+  <!-- 영화3 div -->
+  <div class = "content3" >
+    <!-- 영화 이미지 -->
+    <img src="media/극한직업(코미디).png" class="image3" align="left">
+    <!-- 관람가 및 영화제목 span -->
+    <span class="title3-age">
+      <img src="img/15.png" class="age15" align="">
+    </span>
+    <span class="title3" id="movie_name3">극한직업(코미디)</span><br>
+    <!-- 시간 선택 span -->
+    <span class="timechoice3">
+      <button class="trigger20" onclick="age=15;movie_name_id='movie_name3';time_id='time20'; submit2()" id="time20">09:10</button></span>
+      <button class="trigger21" onclick="age=15;movie_name_id='movie_name3';time_id='time21'; submit2()" id="time21">11:30</button></span>
+      <button class="trigger22" onclick="age=15;movie_name_id='movie_name3';time_id='time22'; submit2()" id="time22">16:10</button></span>
+      <button class="trigger23" onclick="age=15;movie_name_id='movie_name3';time_id='time23'; submit2()" id="time23">18:30</button></span>
+      <button class="trigger24" onclick="age=15;movie_name_id='movie_name3';time_id='time24'; submit2()" id="time24">20:50</button></span>
+      <br>
+      <button class="trigger25" onclick="age=15;movie_name_id='movie_name3';time_id='time25'; submit2()" id="time25">11:30</button></span>
+      <button class="trigger26" onclick="age=15;movie_name_id='movie_name3';time_id='time26'; submit2()" id="time26">15:55</button></span>
+      <button class="trigger27" onclick="age=15;movie_name_id='movie_name3';time_id='time27'; submit2()" id="time27">18:15</button></span>
+      <button class="trigger28" onclick="age=15;movie_name_id='movie_name3';time_id='time28'; submit2()" id="time28">20:35</button></span>
+      <button class="trigger29" onclick="age=15;movie_name_id='movie_name3';time_id='time29'; submit2()" id="time29">22:55</button></span>
+     </span>
+  </div>
+
+  <!-- 영화4 div -->
+  <div class = "content4" >
+    <!-- 영화 이미지 -->
+    <img src="media/명량(사극드라마).png" class="image4" align="left">
+    <!-- 관람가 및 영화제목 span -->
+    <span class="title4-age">
+      <img src="img/15.png" class="age15" align="">
+    </span>
+    <span class="title4" id="movie_name4">명량(사극드라마)</span><br>
+    <!-- 시간 선택 span -->
+    <span class="timechoice4">
+      <button class="trigger30" onclick="age=15;movie_name_id='movie_name4';time_id='time30'; submit2()" id="time30">09:40</button></span>
+      <button class="trigger31" onclick="age=15;movie_name_id='movie_name4';time_id='time31'; submit2()" id="time31">12:30</button></span>
+      <button class="trigger32" onclick="age=15;movie_name_id='movie_name4';time_id='time32'; submit2()" id="time32">15:20</button></span>
+      <button class="trigger33" onclick="age=15;movie_name_id='movie_name4';time_id='time33'; submit2()" id="time33">18:00</button></span>
+      <button class="trigger34" onclick="age=15;movie_name_id='movie_name4';time_id='time34'; submit2()" id="time34">21:00</button></span>
+      <br>
+      <button class="trigger35" onclick="age=15;movie_name_id='movie_name4';time_id='time35'; submit2()" id="time35">09:00</button></span>
+      <button class="trigger36" onclick="age=15;movie_name_id='movie_name4';time_id='time36'; submit2()" id="time36">16:15</button></span>
+      <button class="trigger37" onclick="age=15;movie_name_id='movie_name4';time_id='time37'; submit2()" id="time37">19:05</button></span>
+      <button class="trigger38" onclick="age=15;movie_name_id='movie_name4';time_id='time38'; submit2()" id="time38">22:00</button></span>
+      <button class="trigger39" onclick="age=15;movie_name_id='movie_name4';time_id='time39'; submit2()" id="time39">23:50</button></span>
+     </span>
+  </div>
+
+  <!-- 영화5 div -->
+  <div class = "content5" >
+    <!-- 영화 이미지 -->
+    <img src="media/신과 함께(판타지).png" class="image5" align="left">
+    <!-- 관람가 및 영화제목 span -->
+    <span class="title5-age">
+      <img src="img/12.png" class="age12" align="">
+    </span>
+    <span class="title5" id="movie_name5">신과 함께(판타지)</span><br>
+    <!-- 시간 선택 span -->
+    <span class="timechoice5">
+      <button class="trigger40" onclick="age=12;movie_name_id='movie_name5';time_id='time40'; submit2()" id="time40">10:30</button></span>
+      <button class="trigger41" onclick="age=12;movie_name_id='movie_name5';time_id='time41'; submit2()" id="time41">13:00</button></span>
+      <button class="trigger42" onclick="age=12;movie_name_id='movie_name5';time_id='time42'; submit2()" id="time42">15:45</button></span>
+      <button class="trigger43" onclick="age=12;movie_name_id='movie_name5';time_id='time43'; submit2()" id="time43">20:15</button></span>
+      <button class="trigger44" onclick="age=12;movie_name_id='movie_name5';time_id='time44'; submit2()" id="time44">22:40</button></span>
+      <br>
+      <button class="trigger45" onclick="age=12;movie_name_id='movie_name5';time_id='time45'; submit2()" id="time45">09:30</button></span>
+      <button class="trigger46" onclick="age=12;movie_name_id='movie_name5';time_id='time46'; submit2()" id="time46">11:55</button></span>
+      <button class="trigger47" onclick="age=12;movie_name_id='movie_name5';time_id='time47'; submit2()" id="time47">14:20</button></span>
+      <button class="trigger48" onclick="age=12;movie_name_id='movie_name5';time_id='time48'; submit2()" id="time48">19:10</button></span>
+      <button class="trigger49" onclick="age=12;movie_name_id='movie_name5';time_id='time49'; submit2()" id="time49">24:10</button></span>
+     </span>
+  </div>
+
+
+  <!-- moiviecontent와 이전버튼 사이공간 div -->
+  <div class="space">
+  </div>
+  </div>
+</div>
+  <!-- 이전 div -->
+  <div class="footer">
+    <button class="previous" onclick="window.location.href='1.html'">
+      ◀ 이전
+    </button>
+  </div>
+
+  <!-- 인원 선택 팝업 div -->
+  <div class="modal">
+        <!-- 팝업 내용 div -->
+        <div class="modal-content">
+              <!-- X버튼 span -->
+             <span class="close-button" onclick="a=0;y=0;insert(a,y)">&times;</span>
+             <div class="modaltitle">관람인원을 선택해 주세요.</div>
+             <form name="form1" action="#post.php" method="POST">
+              <!-- 인원 선택 칸 div -->
+              <form name="form1" action="#post.php" method="POST">
+              <!-- 인원 선택 칸 div -->
+              <!-- 성인 div-->
+               <div class="adultDiv">
+                 <input type="button" class="adult" id="adult" value="성인">
+                 <input type="button" class="adultN" id="adult0" value="0" target="a1" onclick="a=adult0.value; insert(a,y);">
+                 <input type="button" class="adultN" id="adult1" value="1" target="a1" onclick="a=adult1.value; insert(a,y)">
+                 <input type="button" class="adultN" id="adult2" value="2" target="a1" onclick="a=adult2.value; insert(a,y)">
+                 <input type="button" class="adultN" id="adult3" value="3" target="a1" onclick="a=adult3.value; insert(a,y)">
+                 <input type="button" class="adultN" id="adult4" value="4" target="a1" onclick="a=adult4.value; insert(a,y)">
+                 <input type="button" class="adultN" id="adult5" value="5" target="a1" onclick="a=adult5.value; insert(a,y)">
+                 <input type="button" class="adultN" id="adult6" value="6" target="a1" onclick="a=adult6.value; insert(a,y)">
+                 <input type="button" class="adultN" id="adult7" value="7" target="a1" onclick="a=adult7.value; insert(a,y)">
+                 <input type="button" class="adultN" id="adult8" value="8" target="a1" onclick="a=adult8.value; insert(a,y)">
+
+                </div>
+              </form>
+              <!-- 청소년 -->
+              <form name="form2" action="#post.php" method="POST">
+                <div class="youthDiv">
+                 <input type="button" class="youth" id="youth" value="청소년">
+                 <input type="button" class="youthN" id="youth0" value="0" target="a2" onclick="y=youth0.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth1" value="1" target="a2" onclick="y=youth1.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth2" value="2" target="a2" onclick="y=youth2.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth3" value="3" target="a2" onclick="y=youth3.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth4" value="4" target="a2" onclick="y=youth4.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth5" value="5" target="a2" onclick="y=youth5.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth6" value="6" target="a2" onclick="y=youth6.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth7" value="7" target="a2" onclick="y=youth7.value; insert(a,y)">
+                 <input type="button" class="youthN" id="youth8" value="8" target="a2" onclick="y=youth8.value; insert(a,y)">
+               </div>
+
+            </form>
+            <form name="form3" action="4.php" method="post">
+              <!-- 총원, 총가격 div -->
+              <br>총
+              <input type="text" placeholder="0" name="" class="screen" size="12" id ="d1" value="" disabled />
+               명,
+               총 <input type="text" placeholder="0" name="" class="screen" size="12" id ="d2" value="" disabled />
+               원 <br>
+               <!-- 완료 버튼 -->
+               <textarea id="age_post" name="age_post" rows="1" cols="20" style="display:none"></textarea>
+               <textarea id="personnel_post" name="personnel_post" rows="1" cols="20" style="display:none"></textarea>
+               <textarea id="price_post" name="price_post" rows="1" cols="20" style="display:none"></textarea>
+               <textarea id="date_post" name="date_post" rows="1" cols="20" style="display:none"></textarea>
+               <textarea id="time_post" name="time_post" rows="1" cols="20" style="display:none"></textarea>
+               <textarea id="movie_name_post" name="movie_name_post" rows="1" cols="20" style="display:none"></textarea>
+               <input type="submit" id="submit" value="완료" onclick="submit3();
+              if(a==0&&y==0){
+                $('#submit').attr('type','button')
+              }else{
+                $('#submit').attr('type','submit')
+              }">
+          </form>
+        </div>
+     </div>
+     <script type="text/javascript" src="js/submit.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="js/pop_up.js"></script>
+     <script src="js/total.js"></script>
+     <script src="js/dateChoice.js"></script>
+     <script>
+     $('[target=a1]').on('click',function(){
+       $("[target=a1]").css("background-color","");
+        $("[target=a1]").removeClass('a2');
+        $(this).addClass('a2');
+        $(this).css('background-color','#454545');
+     })
+     $('[target=a2]').on('click',function(){
+        $("[target=a2]").css("background-color","");
+        $("[target=a2]").removeClass('a2');
+        $(this).addClass('a2');
+        $(this).css('background-color','#454545');
+     })
+     $('.close-button').click(function(){
+      $("[target=a1]").css("background-color","");
+      $("[target=a2]").css("background-color","");
+     })
+     </script>
+</body>
+</html>

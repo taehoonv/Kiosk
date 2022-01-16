@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body{
+  margin: 0 auto;
+  background-color:white;
+  text-align: center;
+  font-size:1.6em;
+}
+#main{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+      height: 100%;
+    }
+img.name{
+  width:720px;
+  height:40px;
+  line-height: 40px;
+  background-color:gray;
+  color:white;
+  vertical-align: bottom;
+}
+
+.time{
+  width:720px;
+  height:160px;
+  background-color:#727272;
+  color:white;
+}
+
+
+#time{
+  padding-top: 50px;
+  letter-spacing : 1px;
+  line-height: 30px;
+}
+
+.write{
+  color: white;
+  font-size: 0.8em;
+  padding-top: 50px;
+}
+
+.cardBox{
+  width:720px;
+  height: 540px;
+  line-height: 100px;
+  background-color: #4f4f4f;
+}
+/* 고친 부분 */
+img.btn{
+  width:240px;
+  height:280px;
+  padding:0;
+  margin-top: 20px;
+  display:inline-block;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.leftbtn{
+  margin-left: 90px;
+  margin-right:20px;
+}
+.rightbtn{
+  margin-left: 20px;
+  margin-right:90px;
+}
+.beforeafter{
+  width:720px;
+  height:50px;
+  line-height:50px;
+  background-color: #727272;
+  color: white;
+}
+
+.before{
+  width:90px;
+  height:30px;
+  font-size: 0.7em; 
+  line-height:30px;
+  color: white;
+  margin-top: 10px;
+  background-color: #979797;
+  float: left;
+}

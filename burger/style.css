@@ -1,0 +1,152 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body {
+    width: 720px;
+    font-family: 'Noto Sans KR';
+    color: #4f4f4f;
+}
+
+#mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #000000;
+    display: none;
+}
+
+#mask2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #000000;
+    display: none;
+}
+
+.frame_LHB {
+    /*대부분의 틀*/
+    height: 40px;
+    line-height: 40px;
+    background: #F5F3d5;
+    color: #4F4F4F;
+    font-size: 14pt;
+    font-family: 'Noto Sans KR';
+    outline: none;
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    float: left;
+}
+
+.btn_LHB {
+    /*버튼*/
+    border: 2px solid black;
+    border-color: #F5F3d5;
+    background: #F5F3d5;
+    cursor: pointer;
+}
+
+.btn_LHB_select {
+    /*버튼 누를시*/
+    font-size: 14pt;
+    background: #F5F3d5;
+    border-color: #8FC43B;
+    width: 200px;
+    height: 60px;
+    position: relative;
+    top: 20px;
+}
+
+.background_select {
+    /*버튼 선택 뒤 배경*/
+    background: #F5F3d5;
+    height: 100px;
+}
+
+.recipt_LHB{
+    line-height: 40px;
+    vertical-align: middle;
+    height: 40px;
+}
+
+
+/*main화면 맞추기*/
+
+body {
+    margin: 0 auto;
+}
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+    height: 100%;
+}
+
+.layerpop_LHB {
+    display: none;
+    z-index: 1000;
+    border: 2px solid #ccc;
+    background: #fff;
+}
+
+.layerpop_area_LHB .layerpop_close_LHB {
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent url('exit_buton.png') no-repeat;
+}
+
+.layerpop_area_LHB .layerpop_close_LHB:hover {
+    width: 25px;
+    height: 25px;
+    background: transparent url('exit_button.png') no-repeat;
+    cursor: pointer;
+}
+
+.layerpop_area_LHB .content_LHB {
+    width: 96%;
+    margin: 2%;
+    color: #828282;
+}
+
+
+.layerpop_LHB2 {
+    display: none;
+    z-index: 1000;
+    border: 2px solid #ccc;
+    background: #fff;
+}
+
+.layerpop_area_LHB2 .layerpop_close_LHB2 {
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent url('exit_buton.png') no-repeat;
+}
+
+.layerpop_area_LHB2 .layerpop_close_LHB2:hover {
+    width: 25px;
+    height: 25px;
+    background: transparent url('exit_button.png') no-repeat;
+    cursor: pointer;
+}
+
+.layerpop_area_LHB2 .content_LHB2 {
+    width: 96%;
+    margin: 2%;
+    color: #828282;
+}
+
+::-webkit-scrollbar{width: 16px;}
+::-webkit-scrollbar-track {background-color:#f5f3d5;}
+::-webkit-scrollbar-thumb {background-color:#dbd57d;border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #918922;}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+width:16px;height:16px;background:#dbd57d;}

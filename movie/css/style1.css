@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body{
+  margin: 0 auto;
+  background-color:white;
+  text-align: center;
+  font-size:1.6em;
+}
+#main{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+      height: 100%;
+    }
+img.name{
+  width:720px;
+  height:40px;
+  line-height: 40px;
+  background-color:gray;
+  color:white;
+  vertical-align: bottom;
+}
+
+.time{
+  width:720px;
+  height:160px;
+  background-color:#727272;
+  color: white;
+}
+
+#time{
+  letter-spacing : 1px;
+  line-height: 30px;
+  padding-top: 50px;
+}
+.ad_wrap{
+  width: 720px;
+  height: 100%;
+  position: relative;
+}
+.ad_wrap .ad_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+img.Advertisement{
+  width:100%;
+  vertical-align: bottom;
+}
+.cardBox{
+  width:720px;
+  height:290px;
+  line-height: 290px;
+  background-color: #4f4f4f;
+}
+/* 1002 */
+img.btn{
+  width:180px;
+  height:200px;
+  margin:20px;
+  margin-top:45px;
+  margin-bottom:0;
+  cursor: pointer;
+}

@@ -1,0 +1,320 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+*{margin: 0;padding: 0;}
+/* JA CINEMA */
+a{
+  width: 720px;
+  height: 40px;
+}
+.name{
+  width: 720px;
+  height: 40px;
+}
+
+.title1{
+  
+}
+.title2{
+  font-size: 15px;
+}
+.title3{
+  font-size: 15px;
+}
+.title4{
+  font-size: 15px;
+}
+.title5{
+  font-size: 15px;
+}
+.ja{
+  width: 720px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+/* 날짜선택 div */
+.datechoice{
+  background-color:#f5f3d5;
+  text-align: center;
+  width: 720px;
+  height: 50px;
+}
+.date{
+  padding-top: 13.4px;
+}
+/* 영화별 시간별 */
+.choice{
+  background-color:#f5f3d5;
+  width: 720px;
+  height: 50px;
+}
+/* 영화내용과 이전 버튼 사이의 공간 div */
+.space{
+  height: 20px;
+}
+/* 하단바 div */
+.footer{
+  width: 720px;
+  height: 50px;
+  background-color: #727272;
+
+}
+/* 영화 시간 버튼 */
+.trigger,.trigger1,.trigger2,.trigger3,.trigger4,.trigger5,.trigger6
+,.trigger7,.trigger8,.trigger9,.trigger10,.trigger11,.trigger12,.trigger13
+,.trigger14,.trigger15,.trigger16,.trigger17,.trigger18,.trigger19
+,.trigger20,.trigger21,.trigger22,.trigger23,.trigger24,.trigger25
+,.trigger26,.trigger27,.trigger28,.trigger29
+,.trigger30,.trigger31,.trigger32,.trigger33,.trigger34,.trigger35
+,.trigger36,.trigger37,.trigger38,.trigger39
+,.trigger40,.trigger41,.trigger42,.trigger43,.trigger44,.trigger45
+,.trigger46,.trigger47,.trigger48,.trigger49
+{
+  width: 80px;
+  height: 50px;
+  color: white;
+  background-color: #454545;
+  text-decoration-color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* 이전버튼 */
+.previous{
+  width: 90px;
+  height: 30px;
+  color: white;
+  background-color: #979797;
+  position: relative;
+  font-size: 19px;
+  top: 10px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+span{
+    font-family: 'Noto Sans KR';
+}
+button{
+    font-family: 'Noto Sans KR';
+}
+body{
+  width: 720px;
+  height: 790px;
+  font-family: 'Noto Sans KR';
+  margin: 0 auto;
+}
+div{
+  font-family: 'Noto Sans KR';
+  clear: both;
+}
+form {
+    margin: 0 auto;
+    text-align: center;
+}
+/* 완료 버튼 */
+#submit{
+    width: 80px;
+    height: 40px;
+    background-color: #8fc43b;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* 성인, 청소년 버튼 */
+#adult,#youth{
+    margin-right: 7px;
+    width: 80px;
+    height: 40px;
+    background-color: #f5f3d5;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+}
+/* 완료버튼 hover */
+#submit:hover{
+    color: #fff;
+    background-color: #216282;
+    opacity: 0.9;
+}
+/* 0~5숫자버튼 */
+#adult0,#adult1,#adult2,#adult3,#adult4,#adult5,
+#adult6,#adult7,#adult8,
+#youth0,#youth1,#youth2,#youth3,#youth4,#youth5,
+#youth6,#youth7,#youth8
+{
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #727272;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+/* 0~5숫자버튼 hover */
+#adult0:hover,#adult1:hover,#adult2:hover,#adult3:hover,#adult4:hover,
+#adult5:hover,#adult6:hover,#adult7:hover,#adult8:hover,
+#youth0:hover,#youth1:hover,#youth2:hover,#youth3:hover,#youth4:hover,
+#youth5:hover,#youth6:hover,#youth7:hover,#youth8:hover,
+{
+    color: #fff;
+    background-color: #216282;
+    opacity: 0.9;
+}
+/* 팝업창 css */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+/* 팝업창 내용 css */
+.modal-content {
+    font-family: 'Noto Sans KR';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: #4f4f4f;
+    width: 540px;
+    height: 300px;
+}
+/* 팝업창 x버튼 css */
+.close-button {
+    margin: 0; padding: 0;
+    float: right;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 25px;
+    color: #4f4f4f;
+    cursor: pointer;
+    background-color: #8fc43b;
+}
+/* 관람인원을 선택해주세요 css */
+.modaltitle{
+  text-align: center;
+  font-size: 17px;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+/* 팝업창 css */
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+/* 날짜 왼쪽 화살표 */
+.arrow_left{
+  display: inline-block;
+  width: 0; height: 0;
+  border-left: 9px solid transparent;
+  border-right: 15px solid #454545;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  float:left;
+  cursor: pointer;
+}
+/* 날짜 오른쪽 화살표 */
+.arrow_right{
+  display: inline-block;
+  width: 0; height: 0;
+  border-left: 15px solid #454545;
+  border-right: 9px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  float:right;
+  cursor: pointer;
+}
+/* 이전 왼쪽 화살표 */
+.previous_arrow_left{
+  display: inline-block;
+  width: 0; height: 0;
+  border-left: 8px solid transparent;
+  border-right: 10px solid #454545;
+  border-top: 7px solid transparent;
+  border-bottom: 8px solid transparent;
+  float:left;
+}
+/* 영화내용 전체 div css */
+.moviecontent{
+  width: 720px;
+  height: 600px;
+  background-color: #4f4f4f;
+  overflow-y: auto;
+}
+/* 양화내용 css */
+.content1,.content2,.content3,.content4,.content5{
+  padding-left: 90px;
+  padding-top: 20px;
+}
+/* 영화포스터 css */
+.image1,.image2,.image3,.image4,.image5{
+  width: 105px;
+  height: 140px;
+}
+/* 영화관람가 css */
+.title1-age,.title2-age,.title3-age,.title4-age,.title5-age{
+  margin-left: 40px;
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+}
+/* 영화제목 css */
+.title1,.title2,.title3,.title4,.title5{
+  font-size: 18px;
+  color: white;
+  bottom: 3px;
+  position: relative;
+}
+.timechoice1,.timechoice2,.timechoice3,.timechoice4,.timechoice5{
+  margin-left:40px;
+}
+.trigger5,.trigger15,.trigger25,.trigger35,.trigger45{
+  margin-left:40px;
+  margin-top:5px;
+}
+/* 관람가img css */
+.age12,.age15{
+  width: 20px;
+  height: 20px;
+}
+/* 영화별 버튼 css */
+.moviealign{
+  margin-top: 10px;
+  width: 160px;
+  height: 40px;
+  background-color: #4f4f4f;
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+/* 시간순 버튼 css */
+.timealign{
+  margin-top: 10px;
+  margin-left: -4px;
+  width: 160px;
+  height: 40px;
+  background-color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+/* 팝업창 총 명,원 text css */
+.screen{
+  text-align: center;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JA CINEMA KIOSK</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style1.css">
+    <script>
+      function alertpopup(){
+        alert("패스트푸드 키오스크를 참고하세요!");
+      }
+    </script>
+  </head>
+  <body id="main">
+    <a href="../index.html"><img src="img/topBar.png" class="name"></img></a>
+    <div class="time">
+      <div id = "time">
+        <script>
+          var today = new Date();
+          var week = new Array('일','월','화','수','목','금','토');
+          var getCurrentAmPm = today.getHours() >= 12 ? 'PM' : 'AM';
+          var day = today.getDate();
+          var date = today.getFullYear() +'.'+(today.getMonth()+1)+'.'+day+'('+week[today.getDay()]+')';
+          var time = today.getHours()+":";
+          var minutes = today.getMinutes();
+          if(day<10){
+            day = "0"+day
+            }
+            else {
+              day = day;
+            }
+
+          if(time<10 && minutes<10){
+            time = "0" + time + "0" + minutes;
+          } else if(minutes<10) {
+            time = time + "0"+ minutes;
+          }
+          else{
+              time = time + minutes;
+            }
+
+          var dateTime = date+'<br>'+getCurrentAmPm+time;
+          document.write(dateTime);
+        </script>
+      </div>
+    </div>
+    <!-- 없앤 부분 1002 -->
+    <!-- 추가 1002 -->
+    <img name="slide" class="Advertisement">
+    <div class="cardBox">
+      <a href="2.html"><img src="img/buyTicket.png" class="btn"></img></a>
+      <a href="1-1.html"><img src="img/printTicket.png" class="btn"></img></a>
+      <img src="img/food.png" class="btn" onclick="alertpopup()"></img>
+    </div>
+<!-- 추가 1002 -->
+    <script src="js/changeImg.js"></script>
+  </body>
+</html>

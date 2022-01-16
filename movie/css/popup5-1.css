@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body{
+  width: 720px;
+  height: 790px;
+  margin:0;
+  background-color:white;
+  text-align: center;
+}
+.popup1{
+  width: 540px;
+  height: 540px;
+  text-align: center;
+  background-color: #4f4f4f;
+  color: white;
+  margin: 125px auto;
+  display: none;
+  z-index: 1000;
+  position: relative;
+  font-weight: bold;
+}
+
+.popup2{
+  width: 540px;
+  height: 540px;
+  text-align: center;
+  background-color: #4f4f4f;
+  color: white;
+  margin: 125px auto;
+  display: none;
+  z-index: 1000;
+  position: relative;
+  font-weight: bold;
+}
+
+.popup3{
+  width: 540px;
+  height: 540px;
+  text-align: center;
+  background-color: #4f4f4f;
+  color: white;
+  margin: 125px auto;
+  display: none;
+  z-index: 1000;
+  position: relative;
+  font-weight: bold;
+}
+p.first{
+  font-size: 30px;
+  line-height: 80px;
+  margin-bottom: 0px;
+}
+p.last{
+  font-size: 15px;
+  line-height: 30px;
+}
+/* 고친 부분 1002 */
+img.icon{
+  width: 330px;
+  height: 290px;
+  background-color: gray;
+  color: white;
+  display: block;
+  margin: auto;
+  line-height: 250px;
+}
+/* 새로 생긴 부분 1002 */
+img.icon1{
+  width: 330px;
+  height: 260px;
+  background-color: gray;
+  color: white;
+  display: block;
+  margin: auto;
+  line-height: 250px;
+}
+#close{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 25px;
+  float: right;
+  color: #4f4f4f;
+  background-color: #8fc43b;
+  cursor: pointer;
+}
+.cover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+}
+/* 추가 1002 */
+a{
+  text-decoration: none;
+}

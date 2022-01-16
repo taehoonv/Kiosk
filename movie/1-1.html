@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JA CINEMA KIOSK</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style1-1.css">
+    <link rel="stylesheet" href="css/popup1-1.css">
+    <link rel="stylesheet" href="css/popup5-4.css">
+  </head>
+  <body id="main">
+    <img src="img/topBar.png" class="name"></img>
+    <div class="time">
+      <div id = "time">
+        <script>
+          var today = new Date();
+          var week = new Array('일','월','화','수','목','금','토');
+          var getCurrentAmPm = today.getHours() >= 12 ? 'PM' : 'AM';
+          var day = today.getDate(); 
+          var date = today.getFullYear() +'.'+(today.getMonth()+1)+'.'+day+'('+week[today.getDay()]+')';
+          var time = today.getHours()+":";
+          var minutes = today.getMinutes();
+          if(day<10){
+            day = "0"+day
+            }
+            else {
+              day = day; 
+            }
+          if(minutes<10){
+            time = time + "0" + minutes;
+          } else {
+            time = time + minutes;
+          }
+          var dateTime = date+'<br>'+getCurrentAmPm+time;
+          document.write(dateTime);
+        </script>
+      </div>
+    </div>
+    <div class="cardBox">
+      <div class="write">예매 조회방법을 선택해 주세요.</div>
+      <img src="img/searchTicketNum.png" class="btn leftbtn" onclick="javascript:goDetail1(); reset();"></img> <!-- 새로 추가 -->
+      <img src="img/searchPhoneNum.png" class="btn rightbtn" onclick="javascript:goDetail2(); reset();"></img>
+    </div>
+    <div class="beforeafter">
+      <a href="1.html"><div class="before">◀이전</div></a>
+    </div>
+
+  <!-- popup1-1-->
+
+    <div id="layerbox1" class="popup1">
+      <span id="close">&times;</span>
+      <p class="first"> 예매번호 조회</p>
+      <hr style="width: 300px; color: gray; border: thin solid">
+      <p class="last"> 예매번호를 입력한 후 완료버튼을 눌러주세요</p>
+      <div class="box">
+        <form name="formA">
+          <input type="text" maxlength="2" placeholder="" name="displayResultA" class="screen" size="2" id ="displayResultA" value="" disabled>
+          <div class="key_numpad">
+            <input type="button"  name="b1" value="1" class="key" onclick="insertvalue(b1.value)">
+            <input type="button"  name="b2" value="2" class="key" onclick="insertvalue(b2.value)">
+            <input type="button"  name="b3" value="3" class="key" onclick="insertvalue(b3.value)">
+            <input type="button"  name="b4" value="4" class="key" onclick="insertvalue(b4.value)">
+            <input type="button"  name="b5" value="5" class="key" onclick="insertvalue(b5.value)">
+            <input type="button"  name="b6" value="6" class="key" onclick="insertvalue(b6.value)">
+            <input type="button"  name="b7" value="7" class="key" onclick="insertvalue(b7.value)">
+            <input type="button"  name="b8" value="8" class="key" onclick="insertvalue(b8.value)">
+            <input type="button"  name="b9" value="9" class="key" onclick="insertvalue(b9.value)">
+            <input type="button"  name="back" value="←" class="key"
+            onclick="backNumberA()">
+            <!-- 1002 -->
+            <input type="button"  name="b0" value="0" class="key" onclick="insertvalue(b0.value)">
+            <input type="button"  name="init" value="초기화" class="key" onclick="reset()">
+          </div>
+        </form>
+      </div>
+      <div class="complete" onClick="checkTicketNumber(displayResultA);">완료</div>
+    </div>
+
+    <!-- popup1-2 -->
+    <div id="layerbox2" class="popup2">
+      <span id="close">&times;</span>
+      <p class="first"> 휴대폰번호 조회</p>
+      <hr style="width: 300px; color: gray; border: thin solid">
+      <p class="last"> 휴대폰번호를 입력한 후 완료버튼을 눌러주세요</p>
+      <div class="box">
+        <form name="formB">
+          <input type="text" placeholder="" name="displayResultB" class="screen" size="12" id ="displayResultB" value="" disabled />
+          <div class="key_numpad">
+            <input type="button"  name="b1" value="1" class="key" onclick="insertvalueB(b1.value)">
+            <input type="button"  name="b2" value="2" class="key" onclick="insertvalueB(b2.value)">
+            <input type="button"  name="b3" value="3" class="key" onclick="insertvalueB(b3.value)">
+            <input type="button"  name="b4" value="4" class="key" onclick="insertvalueB(b4.value)">
+            <input type="button"  name="b5" value="5" class="key" onclick="insertvalueB(b5.value)">
+            <input type="button"  name="b6" value="6" class="key" onclick="insertvalueB(b6.value)">
+            <input type="button"  name="b7" value="7" class="key" onclick="insertvalueB(b7.value)">
+            <input type="button"  name="b8" value="8" class="key" onclick="insertvalueB(b8.value)">
+            <input type="button"  name="b9" value="9" class="key" onclick="insertvalueB(b9.value)">
+            <input type="button"  name="back" value="←" class="key" onclick="backNumberB()">
+            <!-- 1002 -->
+            <input type="button"  name="b0" value="0" class="key" onclick="insertvalueB(b0.value)">
+            <input type="button"  name="init" value="초기화" class="key" onclick="reset()">
+          </div>
+        </form>
+      </div>
+      <div class="complete" onClick="checkPhoneNumber(displayResultB);">완료</div>
+    </div>
+
+    <!-- popup3  -->
+    <div id="layerbox4" class="popup4">
+      <p class="first4"> 예매완료</p>
+      <hr style="width: 300px; color: gray; border: thin solid">
+      <p class="last4"> 예매가 완료되었습니다.<br> 출력된 입장권을 받아가세요.</p>
+      <div class="ticket">
+      <div class="receipt">입장권</div>
+      <div class="div">====================</div>
+      <div class="v2">
+        <div id="movietitle" class="m"><img src="img/12.png" id="grade" class="g"></img> <b>신과 함께</b></div>
+        <div class="v3">
+          <div id="date" class="d">2019.09.11(수)</div>
+          <div id="time" class="t">19:15~21:30</div>
+          <div id="personnel" class="p">성인 2 청소년 2</div>
+          <div id="selectedSeat" class="s">J7, J8</div>
+        </div>
+      </div>
+      <div class="div">====================</div>
+      <div class="desc">교환·환불은 상영시작 전까지 입장권 지참해주세요. 시작시간은 10분 정도 차이날 수 있습니다. 상영시간 전 입장 부탁드립니다.
+      </div>
+    </div>
+      <a href="1.html"> <div class="complete4">완료</div></a>
+    </div>
+
+    <!-- cover -->
+    <div id="cover" class="cover"> </div>
+
+    <!-- 팝업기능구현 -->
+    <script src="js/jQuery.js"></script>
+    <script src="js/1-1.js"></script>
+    <script src="js/popup1-1.js"></script>
+  </body>
+</html>

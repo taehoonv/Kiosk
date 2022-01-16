@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+        <meta charset="utf-8">
+        <title>JA CINEMA KIOSK</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/style.css">
+        <style type="text/css">
+            a:link { color: red; text-decoration: none;}
+            a:visited { color: white; text-decoration: none;}
+            a:hover { color: black; text-decoration: none;}
+           </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="top"> <a href="index.html"><img src="img/topBar.png" alt="topbar"></a></div>
+            <div id="view1">
+                <div id="image"><img src="media/movie5.png"></div>
+                <div id="view2">
+                    <div id="movietitle"> <img src="img/age12.png" id="grade"> <b>신과 함께: 죄와 벌</b></div>
+                    <div></div>
+                    <div class="aa">날짜: </div>
+                    <div id="time">시간: 19:15~21:30</div>
+                    <div id="personnel">인원: 성인 2</div>
+                    <div id="selectedSeat">좌석: </div>
+                </div>
+            </div>
+            <div class="costbox">
+                <div id="price">
+                  결제금액 &nbsp&nbsp24,000원
+                </div>
+            </div>    
+            <br>
+            <div id="seat">
+                <a href="preview.html"><div id="screen">SCREEN</div></a>
+                <br>
+                <br>
+                <div id="extable">
+                        <div class="row1">
+                            <div class="cant">
+                                <span class="cell1"><img src="img/cant.png"></span>
+                                <span class="cell1"><img src="img/cant.png"></span>
+                                <span class="cell1"><img src="img/cant.png"></span>
+                                <span class="cell1"><img src="img/cant.png"></span>
+                            </div>
+                                <span class="cell1"><img src="img/wheel.png"></span>
+                                <span class="cell1"><img src="img/wheel.png"></span>
+                                <span class="cell1"><img src="img/wheel.png"></span>
+                                <span class="cell2"><img src="img/wheel.png"></span>
+                            </div>
+                    </div>
+                <div class="wrapper"></div>
+            </div>    
+            <div id="notice"><img src="img/seatGuide.png">
+            </div>
+            <br>
+            <div id="form">
+                <button id="previous" onclick="window.location.href='2.html'"> ◀ 이전 </button>
+                <button id="next" onclick="window.location.href='5.html'"> 다음 ▶ </button>
+            </div>    
+        <script type="text/javascript" src="js/book.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    </body>
+</html>
+
+  <!--
+<form>
+    <!-- <input type="button" value="좌석안내 (좌석 미리보기)" id="notice" 
+    onclick="window.location.href='preview.html'"/>
+    </form>
+

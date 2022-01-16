@@ -1,0 +1,638 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JA burger</title>
+        <link rel="stylesheet" href="kiosk.css">
+        <link
+        rel="stylesheet" type="text/css" href="stylepop.css">
+        <!--css-->
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+        <script type="text/javascript" src="jspop.js"></script>
+        <!--js-->
+        <meta
+        charset="utf-8">
+        <!--<script type="text/javascript" src="jquery.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet" type="text/css" href="style.css?after">
+        <!--css-->
+        <script type="text/javascript" src="js.js"></script>
+        <!--js-->
+    </head>
+    <body>
+        <div class="place">
+            <div class="headname">
+                <a href="../index.html"><img src="topbar.png" width="720px"></a>
+            </div>
+        </div>
+        <div id="menuselect">
+            <div class="head">
+                <div class="tab">
+                    <button class="tablinks active" onclick="openCity(event, 'hamburger')" style="margin-left:50px">햄버거</button>
+                    <button class="tablinks" onclick="openCity(event, 'chicken')">치 킨</button>
+                    <button class="tablinks" onclick="openCity(event, 'sidemenu')">사이드</button>
+                    <button class="tablinks" onclick="openCity(event, 'drink')">음 료</button>
+                </div>
+            </div>
+            <div class="oneblock">
+                <div class="twoblock">
+                    <div id="hamburger" class="tabcontent" style="display: block">
+                        <a class="prev" onclick="plusSlides(-1)"><img class="btimg" src="button_img/buttonLeft.png" width="40px" height="100px"></a>
+                        <section>
+                            <div class="slideshow-container">
+                                <div class="mySlides1 fade">
+                                    <button class="frame btn1 burger" id="bulgogi 불고기버거" value="3800"><img class="img" src="hamburger_img/bulgogi.png" width="140px" height="140px">불고기버거<br>3,800</button>
+                                    <button class="frame btn burger" id="cheddarcheese 체다치즈 버거" value="4200"><img class="img" src="hamburger_img/cheddarcheese.png" width="140px" height="140px">체다치즈 버거<br>4,200</button>
+                                    <button class="frame btn burger" id="cheesebacon 치즈베이컨 버거" value="5900"><img class="img" src="hamburger_img/cheesebacon.png" width="140px" height="140px">치즈베이컨 버거<br>5,900</button>
+                                    <button class="frame btn2 burger" id="chicken 치킨 버거" value="3600"><img class="img" src="hamburger_img/chicken.png" width="140px" height="140px">치킨 버거<br>3,600</button>
+                                    <div></div>
+                                    <button class="frame btn1 btn3 burger" id="double 더블 버거" value="5300"><img class="img" src="hamburger_img/double.png" width="140px" height="140px">더블 버거<br>5,300</button>
+                                    <button class="frame btn btn3 burger" id="hotchrispy 핫치킨 버거" value="4800"><img class="img" src="hamburger_img/hotchrispy.png" width="140px" height="140px">핫치킨 버거<br>4,800</button>
+                                    <button class="frame btn btn3 burger" id="mozzacheese 모짜치즈 버거" value="5600"><img class="img" src="hamburger_img/mozzacheese.png" width="140px" height="140px">모짜치즈 버거<br>5,600</button>
+                                    <button class="frame btn2 btn3 burger" id="shrimp 새우 버거" value="3800"><img class="img" src="hamburger_img/shrimp.png" width="140px" height="140px">새우 버거<br>3,800</button>
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <button class="frame btn1 burger" id="special 스페셜 버거" value="6500"><img class="img" src="hamburger_img/special.png" width="140px" height="140px">스페셜 버거<br>6,500</button>
+                                    <button class="frame btn burger" id="squid 오징어 버거" value="3400"><img class="img" src="hamburger_img/squid.png" width="140px" height="140px">오징어 버거<br>3,400</button>
+                                    <button class="frame btn burger" id="steak 스테이크 버거" value="5600"><img class="img" src="hamburger_img/steak.png" width="140px" height="140px">스테이크 버거<br>5,600</button>
+                                    <button class="frame btn2 burger" id="teri 데리 버거" value="2300"><img class="img" src="hamburger_img/teri.png" width="140px" height="140px">데리 버거<br>2,300</button>
+                                </div>
+                            </div>
+                            <div class="ddots" style="text-align:center">
+                                <span class="dot1" onclick="currentSlide1(1)"></span>
+                                <span class="dot1" onclick="currentSlide1(2)"></span>
+                            </div>
+                            <script>
+                                var slideIndex = 1;
+                                showSlides1(slideIndex);
+                                function plusSlides1(n) {
+                                    showSlides1(slideIndex += n);
+                                }
+                                function currentSlide1(n) {
+                                    showSlides1(slideIndex = n);
+                                }
+                                function showSlides1(n) {
+                                    var i;
+                                    var slides = document.getElementsByClassName("mySlides1");
+                                    var dots = document.getElementsByClassName("dot1");
+                                    if (n > slides.length) {
+                                        slideIndex = slides.length
+                                    }
+                                    if (n < 1) {
+                                        slideIndex = 1
+                                    }
+                                    for (i = 0; i < slides.length; i++) {
+                                        slides[i].style.display = "none";
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" active", "");
+                                    }
+                                    slides[slideIndex - 1].style.display = "block";
+                                    dots[slideIndex - 1].className += " active";
+                                }
+                            </script>
+                        </section>
+                        <div class="threeblock">
+                            <div>
+                                <a class="next" onclick="plusSlides(1)"><img class="btimg" src="button_img/buttonRight.png" width="40px" height="100px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twoblock">
+                    <div id="chicken" class="tabcontent">
+                        <div>
+                            <a class="prev" onclick="plusSlides(-1)"><img class="btimg" src="button_img/buttonLeft.png" width="40px" height="100px"></a>
+                        </div>
+                        <section>
+                            <div class="slideshow-container">
+                                <div class="mySlides2 fade">
+                                    <button class="frame btn1 menu_click" id="치킨(1조각)" value="1500"><img class="img" src="chicken_img/chicken1.png" width="140px" height="140px">치킨(1조각)<br>1,500</button>
+                                    <button class="frame btn menu_click" id="뉴치킨(1조각)" value="1900"><img class="img" src="chicken_img/newchicken1.png" width="140px" height="140px">뉴치킨(1조각)<br>1,900</button>
+                                    <button class="frame btn menu_click" id="핫윙(2조각)" value="2000"><img class="img" src="chicken_img/hotwing2.png" width="140px" height="140px">핫윙(2조각)<br>2,000</button>
+                                    <button class="frame btn2 menu_click" id="핫윙(4조각)" value="4000"><img class="img" src="chicken_img/hotwing4.png" width="140px" height="140px">핫윙(4조각)<br>4,000</button>
+                                    <div></div>
+                                    <button class="frame btn1 btn3 menu_click" id="순살(2조각)" value="1700"><img class="img" src="chicken_img/soon2.png" width="140px" height="140px">순살(2조각)<br>1,700</button>
+                                    <button class="frame btn btn3 menu_click" id="순살(4조각)" value="2000"><img class="img" src="chicken_img/soon4.png" width="140px" height="140px">순살(4조각)<br>2,000</button>
+                                    <button class="frame btn btn3 menu_click" id="뉴순살(2조각)" value="1000"><img class="img" src="chicken_img/newsoon2.png" width="140px" height="140px">뉴순살(2조각)<br>1,000</button>
+                                    <button class="frame btn2 btn3 menu_click" id="뉴순살(4조각)" value="2000"><img class="img" src="chicken_img/newsoon4.png" width="140px" height="140px">뉴순살(4조각)<br>2,000</button>
+                                </div>
+                                <div class="mySlides2 fade">
+                                    <button class="frame btn1 menu_click" id="한마리(감자)" value="1500"><img class="img" src="chicken_img/chickenpotato.png" width="140px" height="140px">한마리(감자)<br>1,500</button>
+                                    <button class="frame btn menu_click" id="한마리(콘)" value="3500"><img class="img" src="chicken_img/chickencorn.png" width="140px" height="140px">한마리(콘)<br>3,500</button>
+                                    <button class="frame btn menu_click" id="반마리(감자)" value="2200"><img class="img" src="chicken_img/halfpotato.png" width="140px" height="140px">반마리(감자)<br>2,200</button>
+                                    <button class="frame btn2 menu_click" id="반마리(콘)" value="2300"><img class="img" src="chicken_img/halfcorn.png" width="140px" height="140px">반마리(콘)<br>2,300</button>
+                                    <div></div>
+                                    <button class="frame btn1 menu_click" id="순살한마리" value="1500"><img class="img" src="chicken_img/soonbox.png" width="140px" height="140px">순살한마리<br>1,500</button>
+                                    <button class="frame btn menu_click" id="순살반마리" value="3500"><img class="img" src="chicken_img/halfsoonbox.png" width="140px" height="140px">순살반마리<br>3,500</button>
+                                </div>
+                            </div>
+                            <div class="ddots" style="text-align:center">
+                                <span class="dot2" onclick="currentSlide2(1)"></span>
+                                <span class="dot2" onclick="currentSlide2(2)"></span>
+                            </div>
+                            <script>
+                                var slideIndex = 1;
+                                showSlides2(slideIndex);
+                                function plusSlides2(n) {
+                                    showSlides2(slideIndex += n);
+                                }
+                                function currentSlide2(n) {
+                                    showSlides2(slideIndex = n);
+                                }
+                                function showSlides2(n) {
+                                    var i;
+                                    var slides = document.getElementsByClassName("mySlides2");
+                                    var dots = document.getElementsByClassName("dot2");
+                                    if (n > slides.length) {
+                                        slideIndex = slides.length
+                                    }
+                                    if (n < 1) {
+                                        slideIndex = 1
+                                    }
+                                    for (i = 0; i < slides.length; i++) {
+                                        slides[i].style.display = "none";
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" active", "");
+                                    }
+                                    slides[slideIndex - 1].style.display = "block";
+                                    dots[slideIndex - 1].className += " active";
+                                }
+                            </script>
+                        </section>
+                        <div class="threeblock">
+                            <div>
+                                <a class="next" onclick="plusSlides(1)"><img class="btimg" src="button_img/buttonRight.png" width="40px" height="100px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twoblock">
+                    <div id="sidemenu" class="tabcontent">
+                        <div>
+                            <a class="prev" onclick="plusSlides(-1)"><img class="btimg" src="button_img/buttonLeft.png" width="40px" height="100px"></a>
+                        </div>
+                        <section>
+                            <div class="slideshow-container">
+                                <div class="mySlides3 fade">
+                                    <button class="frame btn1 menu_click" id="포테이토M" value="1500"><img class="img" src="side_img/potato.png" width="140px" height="140px">포테이토M<br>1,500</button>
+                                    <button class="frame btn menu_click" id="포테이토L" value="1900"><img class="img" src="side_img/largepotato.png" width="140px" height="140px">포테이토L<br>1,900</button>
+                                    <button class="frame btn menu_click" id="양념감자-양파" value="2000"><img class="img" src="side_img/onionpotato.png" width="140px" height="140px">양념감자-양파<br>2,000</button>
+                                    <button class="frame btn2 menu_click" id="양념감자-치즈" value="2000"><img class="img" src="side_img/cheesepotato.png" width="140px" height="140px">양념감자-치즈<br>2,000</button>
+                                    <div></div>
+                                    <button class="frame btn1 btn3 menu_click" id="치즈스틱" value="2000"><img class="img" src="side_img/cheesestick.png" width="140px" height="140px">치즈스틱<br>2,000</button>
+                                    <button class="frame btn btn3 menu_click" id="롱 치즈스틱" value="1700"><img class="img" src="side_img/longcheesestick.png" width="140px" height="140px">롱 치즈스틱<br>1,700</button>
+                                    <button class="frame btn btn3 menu_click" id="오징어링" value="2000"><img class="img" src="side_img/ring.png" width="140px" height="140px">오징어링<br>2,000</button>
+                                    <button class="frame btn2 btn3 menu_click" id="해쉬브라운" value="1000"><img class="img" src="side_img/hash.png" width="140px" height="140px">해쉬브라운<br>1,000</button>
+                                </div>
+                                <div class="mySlides3 fade">
+                                    <button class="frame btn1 menu_click" id="콘샐러드" value="1500"><img class="img" src="side_img/corn.png" width="140px" height="140px">콘샐러드<br>1,500</button>
+                                    <button class="frame btn menu_click" id="팥빙수" value="3500"><img class="img" src="side_img/iceflakes.png" width="140px" height="140px">팥빙수<br>3,500</button>
+                                    <button class="frame btn menu_click" id="초코 아이스크림" value="2200"><img class="img" src="side_img/cicecream.png" width="140px" height="140px">초코 아이스크림<br>2,200</button>
+                                    <button class="frame btn2 menu_click" id="딸기 아이스크림" value="2300"><img class="img" src="side_img/sicecream.png" width="140px" height="140px">딸기 아이스크림<br>2,300</button>
+                                </div>
+                            </div>
+                            <div class="ddots" style="text-align:center">
+                                <span class="dot3" onclick="currentSlide3(1)"></span>
+                                <span class="dot3" onclick="currentSlide3(2)"></span>
+                            </div>
+                            <script>
+                                var slideIndex = 1;
+                                showSlides3(slideIndex);
+                                function plusSlides3(n) {
+                                    showSlides3(slideIndex += n);
+                                }
+                                function currentSlide3(n) {
+                                    showSlides3(slideIndex = n);
+                                }
+                                function showSlides3(n) {
+                                    var i;
+                                    var slides = document.getElementsByClassName("mySlides3");
+                                    var dots = document.getElementsByClassName("dot3");
+                                    if (n > slides.length) {
+                                        slideIndex = slides.length
+                                    }
+                                    if (n < 1) {
+                                        slideIndex = 1
+                                    }
+                                    for (i = 0; i < slides.length; i++) {
+                                        slides[i].style.display = "none";
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" active", "");
+                                    }
+                                    slides[slideIndex - 1].style.display = "block";
+                                    dots[slideIndex - 1].className += " active";
+                                }
+                            </script>
+                        </section>
+                        <div class="threeblock">
+                            <div>
+                                <a class="next" onclick="plusSlides(1)"><img class="btimg" src="button_img/buttonRight.png" width="40px" height="100px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="drink" class="tabcontent">
+                    <section>
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <button class="frame btn1 menu_click" id="콜라M" value="1700"><img class="img" src="drink_img/setcoke.png" width="140px" height="140px">콜라M<br>1,700</button>
+                                <button class="frame btn menu_click" id="사이다M" value="1700"><img class="img" src="drink_img/setsprite.png" width="140px" height="140px">사이다M<br>1,700</button>
+                                <button class="frame btn menu_click" id="콜라L" value="1900"><img class="img" src="drink_img/largecoke.png" width="140px" height="140px">콜라L<br>1,900</button>
+                                <button class="frame btn2 menu_click" id="사이다L" value="1900"><img class="img" src="drink_img/largesprite.png" width="140px" height="140px">사이다L<br>1,900</button>
+                                <div></div>
+                                <button class="frame btn1 btn3 menu_click" id="아메리카노" value="200"><img class="img" src="drink_img/coffee.png" width="140px" height="140px">아메리카노<br>2,000</button>
+                                <button class="frame btn btn3 menu_click" id="아이스아메리카노" value="2000"><img class="img" src="drink_img/icecoffee.png" width="140px" height="140px">아이스아메리카노<br>2,000</button>
+                                <button class="frame btn btn3 menu_click" id="아이스티" value="2200"><img class="img" src="drink_img/icetea.png" width="140px" height="140px">아이스티<br>2,200</button>
+                                <button class="frame btn2 btn3 menu_click" id="레모네이드" value="2500"><img class="img" src="drink_img/lemonade.png" width="140px" height="140px">레모네이드<br>2,500</button>
+                            </div>
+                        </div>
+                        <div class="ddots" style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                        </div>
+                        <script>
+                            var slideIndex = 1;
+                            showSlides(slideIndex);
+                            function plusSlides4(n) {
+                                showSlides(slideIndex += n);
+                            }
+                            function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                            }
+                            function showSlides(n) {
+                                var i;
+                                var slides = document.getElementsByClassName("mySlides");
+                                var dots = document.getElementsByClassName("dot");
+                                if (n > slides.length) {
+                                    slideIndex = slides.length
+                                }
+                                if (n < 1) {
+                                    slideIndex = 1
+                                }
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slides[slideIndex - 1].style.display = "block";
+                                dots[slideIndex - 1].className += " active";
+                            }
+                        </script>
+                    </section>
+                </div>
+            </div>
+            <script>
+                function plusSlides(n) {
+                    plusSlides1(n);
+                    plusSlides2(n);
+                    plusSlides3(n);
+                }
+                function openCity(evt, cityName) {
+                    currentSlide1(1);
+                    currentSlide2(1);
+                    currentSlide3(1);
+                    var i,
+                        tabcontent,
+                        tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document
+                        .getElementById(cityName)
+                        .style
+                        .display = "block";
+                    evt.currentTarget.className += " active";
+                }
+            </script>
+        </div>
+        <!-- 장바구니 시작 -->
+        <div
+            class="shopping_cart" style="z-index: 1;">
+            <!-- 장바구니 제목 -->
+            <div id="blank" style="display: none;height: 20px"></div>
+            <div class="menu" style="height: 40px">
+                <img src="./images/cartBar.png" weight="210px" height="40px">
+            </div>
+            <!-- 제목들 -->
+            <div class="index" style="width: 720px; height: 40px;">
+                <div class="frame_LHB" style="width: 360px">메뉴</div>
+                <div class="frame_LHB" style="width: 160px">수량</div>
+                <div class="frame_LHB" style="width: 200px">금액</div>
+            </div>
+            <!--선택한 메뉴-->
+            <div>
+                <div id="recipts" style="overflow: auto;display: block; height: 80px;">
+                    <div class="recipt_LHB" id="recipt_origin" style="display:none">
+                        <div style="height: 40px; width: 50px; display:block; float: left;"></div>
+                        <div id="menu_name" style="overflow: auto; height: 40px; width: 310px; display:block; float: left;">
+                            메뉴이름1
+                        </div>
+                        <div id="quantities" style="height: 40px; width: 160px; display:block; text-align: center; float: left;">
+                            <div style="height: 10px; width: 160px"></div>
+                            <div style="height: 20px; width: 15px; float:left"></div>
+                            <button class="frame_LHB btn_LHB" style="height: 20px; width:30px; background-image: url('./images/minus.png')" onclick="sub_quantity(this)"></button>
+                            <div id="quantity" style="height: 20px; width: 70px; float: left; line-height: 20px;">1</div>
+                            <button class="frame_LHB btn_LHB" style="height: 20px; width:30px; float: left; background-image: url('./images/plus.png')" onclick="add_quantity(this)"></button>
+                        </div>
+                        <div id="menu_price" style="height: 40px; width: 120px; display:block; text-align: right; float: left;">
+                            1234
+                        </div>
+                        <div id="origin_price" style="display:none">1234</div>
+                        <div style="height: 10px; width: 10px"></div>
+                        <div style="height: 20px; width: 15px; float:left"></div>
+                        <button class="frame_LHB btn_LHB" style="height: 20px; width:30px; float: left; background-image: url('./images/delete.png')" onclick="remove_div(this)"></button>
+                    </div>
+                </div>
+                <div id="total_price" style="height: 40px; text-align: right; line-height: 40px;">총 0원</div>
+            </div>
+            <!--결제 옵션-->
+            <div id="purchase_option" style=" display:none">
+                <!--총액-->
+                <!--결제할때 옵션들-->
+                    <div class="option"> <div style="height: 10px"></div>
+                    <div
+                        class="location">
+                        <!--식사장소 제목-->
+                        <div style="height: 40px;">
+                            <img src="images/packBar.png" weight="210px" height="40px">
+                        </div>
+                        <!--식사장소 버튼-->
+                        <div class="background_select">
+                            <button class="frame_LHB btn_LHB btn_LHB_select" id="here" onclick="javascript: selectHere()" style="background: #FFF; left:100px">매장식사</button>
+                            <button class="frame_LHB btn_LHB btn_LHB_select" id="togo" onclick="javascript: selectTogo()" style="background: #FFF; left:230px; line-height: 25px">포장<br>(테이크 아웃)</button>
+                        </div>
+                    </div>
+                    <div style="height: 20px"></div>
+                    <div
+                        class="payment">
+                        <!--결제 방법 제목-->
+                        <div style="height: 40px">
+                            <img src="./images/payBar.png" weight="210px" height="40px">
+                        </div>
+                        <!--결제 방법 버튼-->
+                        <div class="background_select">
+                            <button class="frame_LHB btn_LHB btn_LHB_select" id="card" onclick="javascript: selectCard()" style="background: #FFF; left:100px">카드</button>
+                            <button class="frame_LHB btn_LHB btn_LHB_select" id="mobile" onclick="javascript: selectMobile()" style="background: #FFF; left:230px">모바일 쿠폰</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="height:20px"></div>
+            </div>
+            <!--결제옵션 끝-->
+            <!--취소, 결제하기-->
+            <div class="decision">
+                <button class="frame_LHB btn_LHB" style="width: 360px" id="prev" onclick="window.location.reload()">초기화</button>
+                <button class="frame_LHB btn_LHB" style="width: 360px; display:none" id="cancel">취소</button>
+                <button class="frame_LHB btn_LHB" style="width: 360px" id="shopping_list">장바구니</button>
+                <button class="frame_LHB btn_LHB" style="width: 360px; display:none" id="purchase" disabled>결제하기</button>
+            </div>
+        </div>
+        <!--장바구니 끝-->
+        <!--결제하기-->
+        <div id="layerbox_LHB" class="layerpop_LHB" style="width: 540px; height: 540px;">
+            <article class="layerpop_area_LHB">
+                <div id="popCard" style="text-align:center; display:">
+                    <h1 id="title_LHB">카드투입</h1>
+                    <h5>_______________________</h5>
+                    <h3>그림과 같이 카드를 투입구에 넣어주세요.<br>결제 오류 시, 카드를 긁어주세요.</h3>
+                    <div style="text-align:center">
+                        <img src="./images/popUpCard.png" width="330px" height="260px">
+                    </div>
+                </div>
+                <div id="popCoupon" style="text-align:center; display:none">
+                    <h1 id="title_LHB">바코드스캔</h1>
+                    <h5>_______________________</h5>
+                    <h3>그림과 같이 바코드를 스캐너에 인식해 주세요.</h3>
+                    <div style="text-align:center">
+                        <img src="./images/popUpBarcode.png" width="330px" height="290px">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div id="layerbox_LHB2" class="layerpop_LHB2" style="width: 540px; height: 540px;">
+            <article class="layerpop_area_LHB2">
+                <div style="text-align:center;">
+                    <h1 id="title_LHB">결제 완료</h1>
+                    <h5>_______________________</h5>
+                    <div style="text-align:center">
+                        <img src="./images/waitingTicket.png" width="330px" height="200px">
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!--결제하기 끝-->
+        <!--MAIN끝-->
+        <!--Popup Start -->
+        <!-- 팝업뜰때 배경 -->
+        <div id="mask"> </div>
+        <div id="mask2"> </div>
+        <!--Popup Start -->
+        <div id="LSY_mask"></div>
+        <!--Popup Start -->
+        <div id="LSY_layerbox" class="LSY_layerpop" style="width: 540px; height: 540px;">
+            <article
+                class="LSY_layerpop_area">
+                <!--팝업 상단 텍스트-->
+                <div style="text-align:center">
+                    <div id="LSY_title" style="font-size:160%;line-height:250%;font-weight:bold;">구성 선택</div>
+                    <hr style="border:solid 1px; width: 50%; margin-bottom: 0;">
+                    <div id="LSY_subtitle" style="font-size:100%;line-height:350%;font-weight:500;">구성을 선택해 주세요</div>
+                </div>
+                <!--닫기 버튼-->
+                <button id="LSY_closepopup" onclick="javascript:popupforceClose()" class="LSY_layerpop_close">×</button>
+                <!--구성선택-->
+                <div id="LSY_option">
+                    <button class="LSY_LSY_frame LSY_btn LSY_opt" id="LSY_solo" value="LSY_solo" style="display: block; margin: 0 auto;">
+                        <img id="soloImage" src="./option/bulgogi.png" width="120px" height="120px" class="LSY_img_pos" style="padding-left:5px">
+                        <div id="soloName" style="line-height:500%">불고기버거 단품</div>
+                        <div id="soloPrice" style="line-height:500%">3,800원</div>
+                    </button>
+                    <div style="line-height: 100%;color:#ffffff">1</div>
+                    <button class="LSY_LSY_frame LSY_btn LSY_opt" id="LSY_set" value="LSY_set" style="display: block; margin: 0 auto;">
+                        <img id="setImage" src="./option/bulgogiset.png" width="120" height="120" class="LSY_img_pos" style="padding-left:5px">
+                        <div id="setName"style="line-height:300%">불고기버거 세트</div>
+                        <div id="setName2"style="line-height:300%">+세트포테이토+세트콜라(R)</div>
+                        <div id="setPrice" style="line-height:300%">3,800원</div>
+                    </button>
+                    <br>
+                </div>
+                <!--재료추가-->
+                <div id="LSY_Ingredient" style="display:none">
+                    <div style="text-align: center;">
+                        <button class="LSY_frame LSY_btn_2 LSY_1st_except" id="추가안함" value="0">
+                            <img src="./ingredient/추가안함.png" alt="ingredient" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">추가안함</div>
+                            <div style="line-height:100%">+ 0</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_1st" id="베이컨" value="500" onclick="aa('베이컨')">
+                            <img src="./ingredient/bacontop.png" alt="ingredient" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">베이컨</div>
+                            <div style="line-height:100%">+ 500</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_1st" id="패티" value="1200" onclick="aa('패티')">
+                            <img src="./ingredient/beeftop.png" alt="ingredient" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">패티</div>
+                            <div style="line-height:100%">+ 1200</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_1st" id="치즈" value="300" onclick="aa('치즈')">
+                            <img src="./ingredient/cheesetop.png" alt="ingredient" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">치즈</div>
+                            <div style="line-height:100%">+ 300</div>
+                        </button>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="LSY_frame LSY_btn_2 LSY_1st" id="토마토" value="300" onclick="aa('토마토')">
+                            <img src="./ingredient/tomatotop.png" alt="ingredient" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">토마토</div>
+                            <div style="line-height:100%">+ 300</div>
+                        </button>
+                        <button class="LSY_btn_none" disabled=""></button>
+                        <button class="LSY_btn_none" disabled=""></button>
+                        <button class="LSY_btn_none" disabled=""></button>
+                    </div>
+                    <br>
+                </div>
+                <!--사이드변경-->
+                <div id="LSY_side" style="display:none">
+                    <div style="text-align: center;">
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+세트감자M" value="0">
+                            <img src="./side/setpotato.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">세트감자M</div>
+                            <div style="line-height:100%">+ 0</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+세트감자L" value="400">
+                            <img src="./side/largepotato.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">세트감자L</div>
+                            <div style="line-height:100%">+ 400</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+치즈스틱" value="500">
+                            <img src="./side/cheesestick.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">치즈스틱</div>
+                            <div style="line-height:100%">+ 500</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+해쉬브라운" value="0">
+                            <img src="./side/hash.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">해쉬브라운</div>
+                            <div style="line-height:100%">+ 0</div>
+                        </button>
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+양념감자-양파" value="500">
+                            <img src="./side/onionpotato.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">양념감자-양파</div>
+                            <div style="line-height:100%">+ 500</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+양념감자-치즈" value="500">
+                            <img src="./side/cheesepotato.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">양념감자-치즈</div>
+                            <div style="line-height:100%">+ 500</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+오징어링" value="500">
+                            <img src="./side/ring.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">오징어링</div>
+                            <div style="line-height:100%">+ 500</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_2nd" id="+치킨" value="800">
+                            <img src="./side/side_chicken.png" alt="side" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">치킨</div>
+                            <div style="line-height:100%">+ 800</div>
+                        </button>
+                    </div>
+                    <br>
+                </div>
+                <!--음료변경-->
+                <div id="LSY_drink" style="display:none">
+                    <div style="text-align: center;">
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+콜라M" value="0">
+                            <img src="./drink_img/setcoke.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">콜라M</div>
+                            <div style="line-height:100%">+ 0</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+사이다M" value="0">
+                            <img src="./drink_img/setsprite.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">사이다M</div>
+                            <div style="line-height:100%">+ 0</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+콜라L" value="200">
+                            <img src="./drink_img/largecoke.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">콜라L</div>
+                            <div style="line-height:100%">+ 200</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+사이다L" value="200">
+                            <img src="./drink_img/largesprite.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">사이다L</div>
+                            <div style="line-height:100%">+ 200</div>
+                        </button>
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+아메리카노" value="300">
+                            <img src="./drink_img/coffee.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">아메리카노</div>
+                            <div style="line-height:100%">+ 300</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+아이스아메리카노" value="300">
+                            <img src="./drink_img/icecoffee.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%; font-size:90%">아이스아메리카노</div>
+                            <div style="line-height:100%">+ 300</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+아이스티" value="500">
+                            <img src="./drink_img/icetea.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">아이스티</div>
+                            <div style="line-height:100%">+ 500</div>
+                        </button>
+                        <button class="LSY_frame LSY_btn_2 LSY_3rd" id="+레모네이드" value="500">
+                            <img src="./drink_img/lemonade.png" alt="drink" width="90px" height="90px" class="LSY_img_pos">
+                            <div style="line-height:200%">레모네이드</div>
+                            <div style="line-height:100%">+ 500</div>
+                        </button>
+                    </div>
+                    <br>
+                </div>
+                <!--이전,확인 버튼 모음-->
+                <div style="text-align: center;">
+                    <button class="LSY_unactive_page" id="LSY_next" disabled='disabled' style="width: 80px; height: 40px; display: block; margin: 0 auto;">
+                        완료
+                    </button>
+                </div>
+                <div style="text-align: center;">
+                    <button class="LSY_btn-page" id="LSY_previous1" style="display: none; width: 80px; height: 40px;">
+                        이전
+                    </button>
+                    <button class="LSY_unactive_page" id="LSY_next_page1" disabled='disabled' style="display: none; width: 80px; height: 40px;">
+                        완료
+                    </button>
+                </div>
+                <div style="text-align: center;">
+                    <button class="LSY_btn-page" id="LSY_previous2" style="display: none; width: 80px; height: 40px;">
+                        이전
+                    </button>
+                    <button class="LSY_unactive_page" id="LSY_next_page2" disabled='disabled' style="display: none; width: 80px; height: 40px;">
+                        완료
+                    </button>
+                </div>
+                <div style="text-align: center;">
+                    <button class="LSY_btn-page" id="LSY_previous3" style="display: none; width: 80px; height: 40px;">
+                        이전
+                    </button>
+                    <button class="LSY_unactive_page" id="LSY_next_page3" disabled='disabled' style="display: none; width: 80px; height: 40px;">
+                        완료
+                    </button>
+                </div>
+            </article>
+            <!--Popup End -->
+            <!--Popup End -->
+        </body>
+    </body>
+</html>
